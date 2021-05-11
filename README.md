@@ -2,6 +2,7 @@
 Just a wrapper class I use when working with mariaDB and PHP
 
 db.php is the actual database wrapper class
+
 dd.php is an HTML dropdown builder that uses db.php, so I thought I'd add it in as well since I use it in a lot of stuff
 
 # Usage Example - Exec Query
