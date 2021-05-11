@@ -1,9 +1,11 @@
 # mariaDbWrapper
-Just a wrapper class I use when working with mariaDB and PHP
+Just some wrapper classes I use when working with mariaDB and PHP
 
 db.php is the actual database wrapper class
 
 dd.php is an HTML dropdown builder that uses db.php, so I thought I'd add it in as well since I use it in a lot of stuff
+
+ajax.js is my standard use jquery AJAX caller
 
 # Usage Example - Exec Query
     require_once('db.php');
