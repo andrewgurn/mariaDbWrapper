@@ -38,7 +38,7 @@ ajax.js is my standard use jquery AJAX caller
     var stuff2 = $('#stuff2').val();
     var data = { 'stuff1' : stuff1 , 'stuff2' : stuff2 };
     
-    let refreshSchedule = function(){
-    	functionThatDoesStuffOnSuccess();
+    let functionThatDoesStuffOnSuccess = function(){
+    	//Do some stuff on success
     }
     standardAjaxWrapper('text', 'POST', 'getStuff.php', 'application/x-www-form-urlencoded', data, 'resultsDiv', 'errorDiv', true, true, functionThatDoesStuffOnSuccess);
