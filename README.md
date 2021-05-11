@@ -7,7 +7,7 @@ dd.php is an HTML dropdown builder that uses db.php, so I thought I'd add it in 
 
 ajax.js is my standard use jquery AJAX caller
 
-# Usage Example - Exec Query
+# Usage Example - Exec query
     require_once('db.php');
     $db = new db();
     $conn = $db->getMariaDbConnection();
@@ -32,3 +32,13 @@ ajax.js is my standard use jquery AJAX caller
     $sql = 'SELECT stuffID, stuffName FROM whatever WHERE isDisabled = ?';	
     function buildComplicatedDropdown($elementName, $sql, $paramsArray, $withBlank, $preSelected, $valueAndTextAreDifferent);
     
+# Usage Example - AJAX call
+
+    var stuff1 = $('#stuff1').val();
+    var stuff2 = $('#stuff2').val();
+    var data = { 'stuff1' : stuff1 , 'stuff2' : stuff2 };
+    
+    let refreshSchedule = function(){
+    	functionThatDoesStuffOnSuccess();
+    }
+    standardAjaxWrapper('text', 'POST', 'getStuff.php', 'application/x-www-form-urlencoded', data, 'resultsDiv', 'errorDiv', true, true, functionThatDoesStuffOnSuccess);
