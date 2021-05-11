@@ -21,11 +21,12 @@ dd.php is an HTML dropdown builder that uses db.php, so I thought I'd add it in 
 	
 # Usage Example - Build a dropdown
     require_once('dd.php');
-    $isDisabled = 0;
+    $elementName = 'myHtmlDropdown'
     $withBlank = false;
     $preSelected = 5;
     $valueAndTextAreDifferent = true;
+    $isDisabled = 0;
     $paramsArray = ['i', $isDisabled];
     $sql = 'SELECT stuffID, stuffName FROM whatever WHERE isDisabled = ?';	
-    function buildComplicatedDropdown('myHtmlDropdown', $sql, $paramsArray, $withBlank, $preSelected, $valueAndTextAreDifferent);
+    function buildComplicatedDropdown($elementName, $sql, $paramsArray, $withBlank, $preSelected, $valueAndTextAreDifferent);
     
