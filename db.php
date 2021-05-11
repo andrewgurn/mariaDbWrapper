@@ -54,7 +54,6 @@ class db
 			else
 			{
 				return $conn->error;
-				//return "exec fail";
 			}
 		}
 		else
