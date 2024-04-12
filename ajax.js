@@ -30,4 +30,22 @@ function standardAjaxWrapper(varDataType, varType, varUrl, varContentType, varDa
 	});
 }
 
-
+function standardAjaxPromiseWrapper(varDataType, varType, varUrl, varContentType, varData)
+{
+	return new Promise((resolve, reject)=>
+	{
+		$.ajax({
+		    dataType: varDataType,
+		    type: varType,
+		    url: varUrl,
+		    data: varData,
+		    contentType: varContentType,
+		    success: function(result){
+			   resolve(result);
+		    },
+		    error: function(xhr, textStatus, errorThrown) {
+		       	   reject(xhr, textStatus, errorThrown);
+		    }
+		});
+	});	
+}
